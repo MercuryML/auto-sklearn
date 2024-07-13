@@ -46,7 +46,7 @@ htmlcov
 
 # VS code
 .vscode/
-
+.venv
 # Others
 *~
 *.dat

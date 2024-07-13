@@ -329,7 +329,7 @@ class FeatureValidator(BaseEstimator):
                             f"you disabled text encoding column {column} will be"
                             f"encoded as category"
                         )
-                elif pd.core.dtypes.common.is_datetime_or_timedelta_dtype(
+                elif pd.api.types.is_datetime64_dtype(X[column].dtype) or pd.api.types.is_timedelta64_dtype(
                     X[column].dtype
                 ):
                     raise ValueError(
